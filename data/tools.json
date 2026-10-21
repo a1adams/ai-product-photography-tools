@@ -1,0 +1,296 @@
+{
+  "keyword": "ai product photography tools for ecommerce",
+  "title": "Best AI Product Photography Tools for Ecommerce: 7 Ranked by API (2026)",
+  "lastChecked": "2026-10-21",
+  "capabilityChecks": [
+    {
+      "key": "publicRestApi",
+      "label": "Public REST API"
+    },
+    {
+      "key": "asyncJobWithPolling",
+      "label": "Async job with polling"
+    },
+    {
+      "key": "completionWebhook",
+      "label": "Completion webhook"
+    },
+    {
+      "key": "manyImagesInOneRequest",
+      "label": "Many images in one request"
+    },
+    {
+      "key": "backgroundRemoval",
+      "label": "Background removal"
+    },
+    {
+      "key": "mcpServer",
+      "label": "MCP server"
+    },
+    {
+      "key": "officialSdk",
+      "label": "Official SDK"
+    }
+  ],
+  "tools": [
+    {
+      "n": 1,
+      "name": "Wireflow",
+      "tagline": "Best overall for running a multi-step product photo chain from one API call",
+      "homepage": "https://www.wireflow.ai/",
+      "docs": "https://www.wireflow.ai/docs/api/overview",
+      "pricing": "https://www.wireflow.ai/pricing",
+      "claudeConnection": "Custom connector, OAuth sign-in",
+      "restApi": true,
+      "modelSupport": "100+ image, video and audio models as nodes",
+      "freeTier": "unverified",
+      "repo": null,
+      "note": null,
+      "quickstart": [
+        {
+          "label": "Add the Wireflow connector to Claude Code, from the wireflowINC/skills README. Then run /mcp to sign in.",
+          "lang": "bash",
+          "code": "claude mcp add --transport http wireflow https://www.wireflow.ai/api/mcp"
+        },
+        {
+          "label": "Or run a saved workflow from code: send its input values to this endpoint with an API key, then poll the execution or add a webhook block. The request format is in the API reference linked under Docs.",
+          "lang": "text",
+          "code": "POST /api/v1/workflows/{id}/run"
+        }
+      ],
+      "moneyPage": "https://www.wireflow.ai/node-based-image-generation",
+      "moneyPageLabel": "Wireflow node based image generation page",
+      "capabilities": {
+        "publicRestApi": true,
+        "asyncJobWithPolling": true,
+        "completionWebhook": true,
+        "manyImagesInOneRequest": true,
+        "backgroundRemoval": true,
+        "mcpServer": true,
+        "officialSdk": false
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "n": 2,
+      "name": "Claid",
+      "tagline": "Best for bulk edits that start from cloud storage",
+      "homepage": "https://claid.ai/",
+      "docs": "https://docs.claid.ai/",
+      "pricing": "https://claid.ai/pricing",
+      "claudeConnection": null,
+      "restApi": true,
+      "modelSupport": null,
+      "freeTier": "unverified",
+      "repo": null,
+      "note": "The free trial gives 50 credits. A trial is not listed here as a free tier.",
+      "quickstart": [
+        {
+          "label": "Resize and adjust one image, from the Claid quick start. Use your own API key and image URL.",
+          "lang": "bash",
+          "code": "curl -X POST --location \"https://api.claid.ai/v1/image/edit\" --http1.1 \\\n    -H \"Host: api.claid.ai\" \\\n    -H \"Authorization: Bearer {YOUR_API_KEY}\" \\\n    -H \"Content-Type: application/json\" \\\n    -d \"{\n            \\\"input\\\": \\\"https://claid.ai/doc-samples/bag.jpeg\\\",\n            \\\"operations\\\": {\n                \\\"resizing\\\": {\n                    \\\"width\\\": 800,\n                    \\\"height\\\": 800,\n                    \\\"fit\\\": \\\"crop\\\"\n                },\n                \\\"adjustments\\\": {\n                    \\\"hdr\\\": 60,\n                    \\\"sharpness\\\": 40\n                }\n            },\n            \\\"output\\\": {\n                \\\"format\\\": {\n                    \\\"type\\\": \\\"jpeg\\\",\n                    \\\"quality\\\": 90\n                }\n            }\n        }\""
+        }
+      ],
+      "capabilities": {
+        "publicRestApi": true,
+        "asyncJobWithPolling": true,
+        "completionWebhook": true,
+        "manyImagesInOneRequest": true,
+        "backgroundRemoval": true,
+        "mcpServer": null,
+        "officialSdk": null
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "n": 3,
+      "name": "Bria",
+      "tagline": "Best for packshots from models trained on licensed data",
+      "homepage": "https://bria.ai/",
+      "docs": "https://docs.bria.ai/",
+      "pricing": "https://bria.ai/pricing",
+      "claudeConnection": "MCP server",
+      "restApi": true,
+      "modelSupport": "Bria models trained on licensed data",
+      "freeTier": "yes",
+      "repo": null,
+      "note": null,
+      "quickstart": [
+        {
+          "label": "Install the official Python SDK, from the Bria docs index (the TypeScript SDK is npm install @bria-ai/client). Set BRIA_API_TOKEN before you run it, as the Bria quickstart shows.",
+          "lang": "bash",
+          "code": "pip install bria-client"
+        }
+      ],
+      "capabilities": {
+        "publicRestApi": true,
+        "asyncJobWithPolling": true,
+        "completionWebhook": true,
+        "manyImagesInOneRequest": null,
+        "backgroundRemoval": true,
+        "mcpServer": true,
+        "officialSdk": true
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "n": 4,
+      "name": "Photoroom",
+      "tagline": "Best for catalogues kept in a spreadsheet",
+      "homepage": "https://www.photoroom.com/",
+      "docs": "https://docs.photoroom.com/",
+      "pricing": "https://www.photoroom.com/api/pricing",
+      "claudeConnection": "Custom connector in Claude",
+      "restApi": true,
+      "modelSupport": null,
+      "freeTier": "unverified",
+      "repo": null,
+      "note": "The API sandbox gives 1,000 watermarked calls a month. A sandbox is not listed here as a free tier.",
+      "quickstart": [
+        {
+          "label": "Remove the background from one image, from the Photoroom Remove Background API quickstart. Use your own API key.",
+          "lang": "bash",
+          "code": "curl --request POST \\\n  --url https://sdk.photoroom.com/v1/segment \\\n  --header 'x-api-key: YOUR_API_KEY' \\\n  --form image_file=@/path/to/your/image.jpg \\\n  --output photoroom-result.png"
+        }
+      ],
+      "capabilities": {
+        "publicRestApi": true,
+        "asyncJobWithPolling": false,
+        "completionWebhook": null,
+        "manyImagesInOneRequest": false,
+        "backgroundRemoval": true,
+        "mcpServer": true,
+        "officialSdk": null
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "n": 5,
+      "name": "Pixelcut",
+      "tagline": "Best for single edits from code or an agent",
+      "homepage": "https://www.pixelcut.ai/",
+      "docs": "https://www.pixelcut.ai/docs",
+      "pricing": "https://www.pixelcut.ai/api",
+      "claudeConnection": "Custom connector (MCP)",
+      "restApi": true,
+      "modelSupport": null,
+      "freeTier": "yes",
+      "repo": null,
+      "note": "The Free plan is the app plan with limited background removal and upscaling. API credits are bought separately.",
+      "quickstart": [
+        {
+          "label": "Remove the background from one image, from the Pixelcut API quickstart. The response carries a result_url that is deleted after at most 24 hours.",
+          "lang": "bash",
+          "code": "curl -sS \"https://api.developer.pixelcut.ai/v1/remove-background\" \\\n  -H \"X-API-Key: <YOUR_API_KEY>\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Accept: application/json\" \\\n  -d '{\n    \"image_url\": \"https://cdn3.pixelcut.app/product.jpg\"\n  }'"
+        },
+        {
+          "label": "Or add the Pixelcut MCP server to Claude Code, from the Pixelcut MCP docs.",
+          "lang": "bash",
+          "code": "claude mcp add pixelcut --transport http https://mcp.pixelcut.ai/mcp"
+        }
+      ],
+      "capabilities": {
+        "publicRestApi": true,
+        "asyncJobWithPolling": null,
+        "completionWebhook": null,
+        "manyImagesInOneRequest": null,
+        "backgroundRemoval": true,
+        "mcpServer": true,
+        "officialSdk": null
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "n": 6,
+      "name": "Flair",
+      "tagline": "Best for branded scenes arranged by a designer",
+      "homepage": "https://flair.ai/",
+      "docs": null,
+      "pricing": "https://flair.ai/pricing",
+      "claudeConnection": null,
+      "restApi": null,
+      "modelSupport": null,
+      "freeTier": "yes",
+      "repo": null,
+      "note": "API access is listed as early access on Scale and unlimited on Enterprise, and no public API reference is published (checked 2026-10-11).",
+      "quickstart": null,
+      "capabilities": {
+        "publicRestApi": null,
+        "asyncJobWithPolling": null,
+        "completionWebhook": null,
+        "manyImagesInOneRequest": null,
+        "backgroundRemoval": null,
+        "mcpServer": null,
+        "officialSdk": null
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "n": 7,
+      "name": "Pebblely",
+      "tagline": "Best for quick bulk shots from inside the app",
+      "homepage": "https://pebblely.com/",
+      "docs": null,
+      "pricing": "https://pebblely.com/pricing/",
+      "claudeConnection": null,
+      "restApi": null,
+      "modelSupport": null,
+      "freeTier": "unverified",
+      "repo": null,
+      "note": "The site lists no public API (checked 2026-10-11). Bulk generate runs in the app on the Basic and Pro plans.",
+      "quickstart": null,
+      "capabilities": {
+        "publicRestApi": null,
+        "asyncJobWithPolling": null,
+        "completionWebhook": null,
+        "manyImagesInOneRequest": null,
+        "backgroundRemoval": null,
+        "mcpServer": null,
+        "officialSdk": null
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    }
+  ]
+}
